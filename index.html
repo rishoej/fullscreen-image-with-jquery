@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="stylesheet" href="style.css">
+	<title>jQuery image fullscreen</title>
+	<style>
+		/* This css is not important so feel free to delete it. All you need is in the style.css file */
+		body{
+			background-color: lightgrey; 
+		}
+		.wrapper {
+			width: 50%; 
+			margin: 0 auto; 
+		}
+	</style>
+</head>
+<body>
+
+<div class="wrapper">
+	<h1>Fullscreen image with jQuery</h1>
+
+	<div class="fullscreen">
+		<span class="btn-fullscreen"></span>
+		<img src="images/image1.jpg"> <!-- Place your image here -->
+	</div>
+	<div class="fullscreen">
+		<span class="btn-fullscreen"></span>
+		<img src="images/image2.jpg"> <!-- Place your image here -->
+	</div>
+	<div class="fullscreen">
+		<span class="btn-fullscreen"></span>
+		<img src="images/image3.jpg"> <!-- Place your image here -->
+	</div>
+	<div class="fullscreen">
+		<span class="btn-fullscreen"></span>
+		<img src="images/image4.jpg"> <!-- Place your image here -->
+	</div>
+	<div class="fullscreen">
+		<span class="btn-fullscreen"></span>
+		<img src="images/image5.jpg"> <!-- Place your image here -->
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+<script>
+	$('.fullscreen').click(function(){
+		if(document.webkitFullscreenElement) {
+	    	document.webkitCancelFullScreen();
+	    }		
+		this.webkitRequestFullScreen();
+	});
+</script>
+
+</body>
+</html>
